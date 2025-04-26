@@ -11,15 +11,11 @@
 import { ref, onMounted } from 'vue'
 import Header from '~/components/Header/header.vue'
 
-const themeClass = ref('light')  // Default to light mode
-
-// Change theme based on toggle
+const themeClass = ref('light')
 const changeTheme = () => {
   themeClass.value = themeClass.value === 'light' ? 'dark' : 'light'
   applyTheme()
 }
-
-// Apply theme to the body or root element
 const applyTheme = () => {
   if (themeClass.value === 'dark') {
     document.documentElement.classList.add('dark')
@@ -29,8 +25,6 @@ const applyTheme = () => {
     localStorage.setItem('theme', 'light')
   }
 }
-
-// Check and apply the theme from localStorage when the app loads
 onMounted(() => {
   const savedTheme = localStorage.getItem('theme')
   if (savedTheme) {
@@ -39,7 +33,3 @@ onMounted(() => {
   }
 })
 </script>
-
-<style scoped>
-/* You can style your app's background color or other properties here */
-</style>

@@ -15,31 +15,8 @@
   <script setup>
   import { useRoute } from "vue-router";
   import { ref, onMounted } from "vue";
-  
-  // Simulate fetching job details based on the ID
   const job = ref(null);
   const route = useRoute();
-  
-  const jobs = [
-    {
-      id: 1,
-      title: "Vue.js Developer",
-      company: "TechCorp",
-      category: "Frontend",
-      salary: "$60,000 - $80,000",
-      description: "We are looking for a Vue.js developer to join our team."
-    },
-    {
-      id: 2,
-      title: "Nuxt.js Engineer",
-      company: "StartupX",
-      category: "Full Stack",
-      salary: "$70,000 - $90,000",
-      description: "Build amazing applications using Nuxt.js!"
-    }
-  ];
-  
-  // On mounted, find the job by its ID
   onMounted(() => {
     const jobId = parseInt(route.params.id);
     job.value = jobs.find(j => j.id === jobId);

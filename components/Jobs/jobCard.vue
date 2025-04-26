@@ -14,15 +14,15 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
-const router = useRouter()
 
-// ✅ Properly define props to access 'job'
 const props = defineProps({
   job: {
     type: Object,
-    required: true
-  }
+    required: true,
+  },
 })
+
+const router = useRouter()
 
 const goToJobDetails = () => {
   router.push(`/jobs/${props.job.id}`)
@@ -30,5 +30,5 @@ const goToJobDetails = () => {
 </script>
 
 <style scoped>
-/* Optional: Additional custom CSS if needed */
+/* Add custom styles here if needed */
 </style>

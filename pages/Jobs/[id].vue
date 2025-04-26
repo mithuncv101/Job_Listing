@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center min-h-screen p-6 bg-gray-100 dark:bg-gray-800 overflow-hidden">
+  <div class="flex items-center justify-center min-h-screen p-6 dark:bg-gray-800 overflow-hidden">
     <div v-if="job" class="bg-white shadow-lg rounded-lg p-8 w-full max-w-3xl transition-transform transform hover:scale-105 hover:shadow-2xl max-h-screen">
       <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">{{ job.title }}</h1>
 

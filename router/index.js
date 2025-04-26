@@ -1,7 +1,6 @@
-// router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
 import Login from '../Login/login.vue'
-import JobList from '../Job/joblist.vue' // <- you'll need to create this component
+import JobList from '../Job/joblist.vue'
 
 const routes = [
   { path: '/login', component: Login },

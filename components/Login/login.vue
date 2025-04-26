@@ -48,7 +48,7 @@ const error = ref('')
 const login = () => {
   if (username.value === 'admin' && password.value === '1234') {
     navigateTo('/jobs')
-    error.value = '' // Clear any previous error message
+    error.value = ''
   } else {
     error.value = 'Invalid username or password'
   }
@@ -56,7 +56,6 @@ const login = () => {
 </script>
 
 <style scoped>
-/* Shared card shadow styles, same as in joblist */
 .shadow-job-card {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

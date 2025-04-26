@@ -1,7 +1,8 @@
 <template>
   <div
     @click="goToJobDetails"
-    class="bg-job-card-gradient border rounded-xl p-6 shadow-job-card hover:shadow-job-card-hover transition-all cursor-pointer"
+    class="bg-job-card-gradient border rounded-xl p-6 shadow-job-card hover:shadow-job-card-hover transition-all cursor-pointer 
+      dark:hover:bg-opacity-80 dark:hover:border-gray-500"
   >
     <h2 class="text-xl font-bold text-gray-800">{{ job.title }}</h2>
     <p class="text-gray-600 mt-1">{{ job.company }}</p>
@@ -28,7 +29,3 @@ const goToJobDetails = () => {
   router.push(`/jobs/${props.job.id}`)
 }
 </script>
-
-<style scoped>
-/* Add custom styles here if needed */
-</style>
